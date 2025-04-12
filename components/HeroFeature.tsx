@@ -57,9 +57,20 @@ const HeroFeature = () => {
     </div>
   )
 }
-
+type Feature = {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  border: string;
+  iconBg: string;
+};
+type FeatureItemProps = {
+  item: Feature;
+  index: number;
+  className?: string;
+};
 // Extracted feature item component for reuse
-const FeatureItem = ({ item, index, className = "" }:any) => {
+const FeatureItem = ({ item, index, className = "" }:FeatureItemProps) => {
   const Icon = item.icon
 
   return (
