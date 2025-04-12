@@ -249,33 +249,32 @@ export default function ProductDetails() {
 
   const openWhatsApp = () => {
     if (!product) return;
-
-    // Format price with 2 decimal places
+  
     const price: number = parseFloat(
       (product.offerPrice || product.price).toFixed(2)
     );
     const totalPrice: string = (price * quantity).toFixed(2);
-
-    // Create a detailed message with product information
+  
     const message = `
-*Order Request*
-------------------
-*Product:* ${product.title}
-*Category:* ${product.category}
-*Price:* $${price} each
-*Quantity:* ${quantity}
-*Total:* $${totalPrice}
-*Features:* ${product.features.join(", ")}
-------------------
-I would like to place an order for this product. Please provide payment and delivery details.
-`;
-
-    // Open WhatsApp with the formatted message
+  *Order Request*
+  ------------------
+  *Product:* ${product.title}
+  *Category:* ${product.category}
+  *Price:* $${price} each
+  *Quantity:* ${quantity}
+  *Total:* $${totalPrice}
+  *Features:* ${product.features.join(", ")}
+  *Image:* ${product.image}
+  ------------------
+  I would like to placee an order for this product. Please provide payment and delivery details.
+    `;
+  
     const whatsappUrl = `https://wa.me/+919633167249?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
   };
+  
 
   // Handle quantity changes
   const decreaseQuantity = () => {

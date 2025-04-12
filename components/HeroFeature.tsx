@@ -63,7 +63,7 @@ type Feature = {
   description: string;
   border: string;
   iconBg: string;
-};
+};  
 type FeatureItemProps = {
   item: Feature;
   index: number;
