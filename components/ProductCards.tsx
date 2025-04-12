@@ -4,20 +4,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 
 export default function KidsProductGrid() {
-  // Product type definition
-  type Product = {
-    id: number
-    title: string
-    image: string
-    category: string
-    rating: number
-    description: string
-    features: string[]
-    price: number
-    offerPrice?: number
-    offerPercentage?: number
-  }
-
+ 
   // Product data
   const products = [
     {

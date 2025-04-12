@@ -1,7 +1,6 @@
 "use client"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Pagination, EffectFade } from "swiper/modules"
-import { useState } from "react"
 
 // Import Swiper styles
 import "swiper/css/pagination"
@@ -11,7 +10,6 @@ import "swiper/css"
 import Image from "next/image"
 
 const HeroCarousel = () => {
-  const [isHovered, setIsHovered] = useState(false)
 
   return (
     <div className="w-full">
@@ -43,8 +41,7 @@ const HeroCarousel = () => {
             <div className="w-full sm:w-1/2 max-w-[500px] py-6 sm:py-10 lg:py-16 px-6 sm:pl-8 lg:pl-16 z-10">
               <div
                 className="flex items-center gap-2 sm:gap-4 mb-4 sm:mb-6 lg:mb-8 transform transition-transform duration-300 hover:scale-105"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+               
               >
                 <span className="block font-bold text-3xl sm:text-4xl lg:text-5xl text-[#EF476F]">30%</span>
                 <span className="block text-[#073B4C] text-xs sm:text-sm lg:text-base font-medium">

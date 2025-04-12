@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Truck, RefreshCw, ShieldCheck, Headphones, Leaf } from "lucide-react"
+import { Truck, RefreshCw, ShieldCheck, Headphones } from "lucide-react"
 
 const featureData = [
   {

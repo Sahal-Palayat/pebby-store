@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { PartyPopper } from "lucide-react";
@@ -56,37 +56,17 @@ const menuData = [
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [navigationOpen, setNavigationOpen] = useState(false);
-  const [stickyMenu, setStickyMenu] = useState(false);
 
-  const handleStickyMenu = () => {
-    if (window.scrollY >= 80) {
-      setStickyMenu(true);
-    } else {
-      setStickyMenu(false);
-    }
-  };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleStickyMenu);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleStickyMenu);
-  //   };
-  // }, []);
-
+ 
   return (
     <>
       <header
-        className={`fixed left-0 top-0 w-full z-[999] bg-[#f9f3e6] transition-all ease-in-out duration-300 ${
-          stickyMenu && "shadow-md shadow-pink-100"
-        }`}
+        className='fixed left-0 top-0 w-full z-[999] bg-[#f9f3e6] transition-all ease-in-out duration-300 '
       >
         <div className="max-w-[1170px] mx-auto px-4 sm:px-6 xl:px-0">
           <div
-            className={`flex items-center justify-between transition-all duration-300 ${
-              stickyMenu ? "py-2" : "py-3"
-            }`}
-          >
-            {/* Logo */}
+            className='flex items-center justify-between transition-all duration-300 py-3'>
+
             <motion.div
               variants={logoVariants}
               initial="hidden"
