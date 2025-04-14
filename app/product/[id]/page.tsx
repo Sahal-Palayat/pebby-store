@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { MessageCircle, Truck, Shield, RotateCcw } from "lucide-react";
+import { MessageCircle, Truck } from "lucide-react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import { products } from "@/app/constants";
@@ -98,18 +98,17 @@ export default function ProductDetails() {
     const message = `
   *Order Request*
   ------------------
-  *Product:* ${product.title}
-  *Category:* ${product.category}
-  *Price:* $${price} each
+  *Product:* ₹${product.title}
+  *Category:* ₹${product.category}
+  *Price:* ₹${price} each
   *Quantity:* ${quantity}
-  *Total:* $${totalPrice}
+  *Total:* ₹${totalPrice}
   *Features:* ${product.features.join(", ")}
-  *Image:* ${product.image}
   ------------------
   I would like to placee an order for this product. Please provide payment and delivery details.
     `;
 
-    const whatsappUrl = `https://wa.me/+919633167249?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/+918136851299?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
@@ -233,11 +232,11 @@ export default function ProductDetails() {
             {/* Price */}
             <div className="flex items-baseline gap-3 mb-6">
               <span className="text-3xl font-bold text-green-600">
-                ₹ {product.offerPrice}
+                ₹ {(product?.offerPrice ?? 0) * quantity}
               </span>
               {product.offerPrice && (
                 <span className="text-lg text-gray-500 line-through">
-                  ₹{product.price}
+                  ₹ {product.price * quantity}
                 </span>
               )}
               {product.offerPercentage && (
@@ -291,102 +290,13 @@ export default function ProductDetails() {
                 <div>
                   <h3 className="font-medium">Free Shipping</h3>
                   <p className="text-sm text-gray-600">
-                    {" Free standard shipping on orders over $35"}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 mb-3">
-                <Shield className="w-5 h-5 text-blue-500 mt-0.5" />
-                <div>
-                  <h3 className="font-medium">Satisfaction Guaranteed</h3>
-                  <p className="text-sm text-gray-600">
-                    {"30-day money-back guarantee"}
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <RotateCcw className="w-5 h-5 text-blue-500 mt-0.5" />
-                <div>
-                  <h3 className="font-medium">Easy Returns</h3>
-                  <p className="text-sm text-gray-600">
-                    {"Hassle-free returns within 14 days"}
+                    {" Free standard shipping on orders over 200"}
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Related products */}
-        {/* <div>
-          <h2 className="text-2xl font-bold mb-6">You May Also Like</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {relatedProducts.map((relatedProduct) => (
-              <motion.div
-                key={relatedProduct.id}
-                whileHover={{ scale: 1.03 }}
-                className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 group relative"
-              >
-                <Link
-                  href={`/product/${relatedProduct.id}`}
-                  className="absolute inset-0 z-10"
-                >
-                  <span className="sr-only">View {relatedProduct.title}</span>
-                </Link>
-
-                <div className="relative">
-                  <img
-                    src={relatedProduct.image || "/placeholder.svg"}
-                    alt={relatedProduct.title}
-                    className="w-full h-36 object-cover"
-                  />
-                  <div
-                    className={`absolute top-2 right-2 ${getCategoryColor(
-                      relatedProduct.category
-                    )} text-white text-xs font-medium px-2 py-1 rounded-full`}
-                  >
-                    {relatedProduct.category}
-                  </div>
-                  {relatedProduct.offerPercentage && (
-                    <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                      {relatedProduct.offerPercentage}% OFF
-                    </div>
-                  )}
-                </div>
-
-                <div className="p-3">
-                  <h3 className="text-sm font-bold mb-1 text-gray-800 line-clamp-1">
-                    {relatedProduct.title}
-                  </h3>
-
-                  <div className="flex items-center mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-3 h-3 ${
-                          i < relatedProduct.rating
-                            ? "fill-yellow-400 text-yellow-400"
-                            : "fill-gray-200 text-gray-200"
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  <div className="flex items-end gap-2">
-                    <span className="font-bold text-sm text-green-600">
-                      ${relatedProduct.offerPrice}
-                    </span>
-                    {relatedProduct.offerPrice && (
-                      <span className="text-xs text-gray-500 line-through">
-                        ${relatedProduct.price}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div> */}
       </div>
     </div>
   );

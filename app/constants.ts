@@ -5,8 +5,8 @@ export const products = [
       title: "Name Slip",
       description: "Personalized name slips perfect for kids to label school supplies, books, and gifts.",
       rating: 5,
-      price: 330,
-      offerPrice: 330,
+      price: 579,
+      offerPrice: 329,
       offerPercentage: 0,
       features: [
         "Customizable with name",
@@ -17,32 +17,7 @@ export const products = [
       image: "/products/name-slip-1.jpg",
       images: [
         "/products/name-slip-1.jpg",
-        "/products/name-slip-1.jpg",
-        "/products/name-slip-1.jpg",
-        "/products/name-slip-1.jpg"
-      ]
-    },
-    {
-      id: 2,
-      category: "Stationery",
-      title: "Face Sticker",
-      description: "Cute and custom face stickers that add personality to notebooks, bottles, and more.",
-      rating: 5,
-      price: 100,
-      offerPrice: 100,
-      offerPercentage: 0,
-      features: [   
-        "Custom face designs",
-        "Safe and non-toxic",
-        "Peel and stick easily",
-        "Fun for kids"
-      ],
-      image: "/products/tiffin.png", 
-      images: [
-        "/products/tiffin.png",
-        "/products/tiffin.png",
-        "/products/tiffin.png",
-        "/products/tiffin.png"
+       
       ]
     },
     {
@@ -51,8 +26,8 @@ export const products = [
       title: "Name Tag",
       description: "Custom name tags to personalize bags, lunch boxes, and school essentials.",
       rating: 5,
-      price: 299,
-      offerPrice: 299,
+      price: 599,
+      offerPrice: 369,
       offerPercentage: 0,
       features: [
         "Personalized name print",
@@ -60,12 +35,11 @@ export const products = [
         "Durable material",
         "Kid-friendly design"
       ],
-      image: "/products/bag-tag-1.jpg",
+      image: "/products/bag-tag-3.jpg",
       images: [
+        "/products/bag-tag-3.jpg",
         "/products/bag-tag-1.jpg",
-        "/products/bag-tag-1.jpg",
-        "/products/bag-tag-1.jpg",
-        "/products/bag-tag-1.jpg"
+        
       ]
     },
     {
@@ -74,8 +48,8 @@ export const products = [
       title: "Bottle",
       description: "Stylish and sturdy water bottle with customizable name, perfect for school use.",
       rating: 5,
-      price: 599,
-      offerPrice: 599,
+      price: 1159,
+      offerPrice: 769,
       offerPercentage: 0,
       features: [
         "BPA-free",
@@ -83,35 +57,11 @@ export const products = [
         "Leak-proof design",
         "Easy to carry"
       ],
-      image: "/products/bottle-1.png",
+      image: "/products/bottle-2.jpg",
       images: [
+        "/products/bottle-2.jpg",
         "/products/bottle-1.png",
-        "/products/bottle-1.png",
-        "/products/bottle-1.png",
-        "/products/bottle-1.png"
-      ]
-    },
-    {
-      id: 5,
-      category: "Stationery",
-      title: "Lunch Box",
-      description: "Compact and fun lunch box for kids, includes a personal name label on the lid.",
-      rating: 5,
-      price: 299,
-      offerPrice: 299,
-      offerPercentage: 0,
-      features: [
-        "Custom label option",
-        "Microwave-safe",
-        "Easy to open",
-        "Perfect for school"
-      ],
-      image: "/products/tiffin.png",
-      images: [
-        "/products/tiffin.png",
-        "/products/tiffin.png",
-        "/products/tiffin.png",
-        "/products/tiffin.png"
+    
       ]
     },
     {
@@ -120,8 +70,8 @@ export const products = [
       title: "Mug",
       description: "Personalized ceramic mug for kids – a perfect gift for birthdays or daily use.",
       rating: 5,
-      price: 299,
-      offerPrice: 299,
+      price: 599,
+      offerPrice: 479,
       offerPercentage: 0,
       features: [
         "Custom name print",
@@ -132,9 +82,7 @@ export const products = [
       image: "/products/mug-1.jpg",
       images: [
         "/products/mug-1.jpg",
-        "/products/mug-1.jpg",
-        "/products/mug-1.jpg",
-        "/products/mug-1.jpg"
+    
       ]
     },
     {
@@ -143,8 +91,8 @@ export const products = [
       title: "Calculator",
       description: "Lightweight and colorful calculator ideal for kids and students in school.",
       rating: 5,
-      price: 399,
-      offerPrice: 399,
+      price: 799 ,
+      offerPrice: 499,
       offerPercentage: 0,
       features: [
         "Easy-to-use",
@@ -166,7 +114,7 @@ export const products = [
       title: "Money Bank",
       description: "Adorable money bank to encourage saving habits in kids – a fun and functional gift.",
       rating: 5,
-      price: 499,
+      price: 649,
       offerPrice: 499,
       offerPercentage: 0,
       features: [

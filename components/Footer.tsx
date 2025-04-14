@@ -1,7 +1,20 @@
+'use client'
 import Link from "next/link"
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react"
+import { useState } from "react"
+import PolicyModal from "./PolicyCom"
+import { FAQContent, PrivacyPolicyContent, ShippingAndReturnsContent, TermsAndPoliciesContent } from "./PolicyModal"
 
 export default function KidsFooter() {
+  const [activeModal, setActiveModal] = useState<string | null>(null)
+
+  const openModal = (modalName: string) => {
+    setActiveModal(modalName)
+  }
+
+  const closeModal = () => {
+    setActiveModal(null)
+  }
   return (
     <footer className="relative mx-2 mb-2 rounded-2xl pt-16 pb-4 bg-purple-600 text-white overflow-hidden">
       {/* Cloud border top - optimized with fewer elements */}
@@ -29,22 +42,7 @@ export default function KidsFooter() {
       </div>
 
       {/* Sun decoration */}
-      <div className="absolute top-8 left-[30%] w-12 h-12">
-        <div className="w-full h-full bg-yellow-300 rounded-full relative">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1.5 h-4 bg-yellow-300"
-              style={{
-                left: "50%",
-                top: "50%",
-                transformOrigin: "50% 0",
-                transform: `translateX(-50%) rotate(${i * 45}deg) translateY(-10px)`,
-              }}
-            ></div>
-          ))}
-        </div>
-      </div>
+     
 
       {/* Star decoration */}
       <div className="absolute top-16 right-[20%] text-yellow-300 text-4xl">★</div>
@@ -56,7 +54,7 @@ export default function KidsFooter() {
             <div className="flex items-center mb-4">
               <img src="/PebbyLogo.png" alt="" width={150} />
             </div>
-            <p className="text-sm mb-2 text-center md:text-left">Kaloor</p>
+            <p className="text-sm mb-2 text-center md:text-left">Panampally Nagar</p>
             <p className="text-sm mb-2 text-center md:text-left">Ernakulam,kerala</p>
             <p className="text-sm mb-4 text-center md:text-left">+91 8136851299</p>
             <p className="text-sm text-center md:text-left">www.pebby.in</p>
@@ -87,30 +85,40 @@ export default function KidsFooter() {
             <h3 className="text-lg font-bold mb-4">Useful Links</h3>
             <ul className="space-y-2 text-center md:text-left">
               <li>
-                <Link href="#" className="hover:text-yellow-300 transition-colors">
+                <Link href="/contact" className="hover:text-yellow-300 transition-colors">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-yellow-300 transition-colors">
+                <Link href="/about" className="hover:text-yellow-300 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-yellow-300 transition-colors">
-                  Terms & Policies
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-yellow-300 transition-colors">
+                <button 
+                  onClick={() => openModal("shipping")} 
+                  className="hover:text-yellow-300 transition-colors"
+                >
                   Shipping & Returns
-                </Link>
+                </button>
               </li>
               <li>
-                <Link href="#" className="hover:text-yellow-300 transition-colors">
-                  FAQ
-                </Link>
+                <button 
+                  onClick={() => openModal("terms")} 
+                  className="hover:text-yellow-300 transition-colors"
+                >
+                  Terms & Policies
+                </button>
               </li>
+              <li>
+                <button 
+                  onClick={() => openModal("privacy")} 
+                  className="hover:text-yellow-300 transition-colors"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+             
             </ul>
           </div>
 
@@ -119,30 +127,21 @@ export default function KidsFooter() {
             <h3 className="text-lg font-bold mb-4">Customer Services</h3>
             <ul className="space-y-2 text-center md:text-left">
               <li>
-                <Link href="#" className="hover:text-yellow-300 transition-colors">
+                <div className="hover:text-yellow-300 transition-colors">
                   Orders
-                </Link>
+                </div>
               </li>
               <li>
-                <Link href="#" className="hover:text-yellow-300 transition-colors">
+                <div className="hover:text-yellow-300 transition-colors">
                   Downloads
-                </Link>
+                </div>
               </li>
               <li>
-                <Link href="#" className="hover:text-yellow-300 transition-colors">
+                <div className="hover:text-yellow-300 transition-colors">
                   Account Details
-                </Link>
+                </div>
               </li>
-              <li>
-                <Link href="#" className="hover:text-yellow-300 transition-colors">
-                  Lost Password
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-yellow-300 transition-colors">
-                  Address
-                </Link>
-              </li>
+             
             </ul>
           </div>
 
@@ -230,6 +229,22 @@ export default function KidsFooter() {
           </div>
         </div>
       </div>
+
+      <PolicyModal isOpen={activeModal === "terms"} onClose={closeModal} title="Terms & Policies">
+        <TermsAndPoliciesContent />
+      </PolicyModal>
+
+      <PolicyModal isOpen={activeModal === "shipping"} onClose={closeModal} title="Shipping & Returns">
+        <ShippingAndReturnsContent />
+      </PolicyModal>
+
+      <PolicyModal isOpen={activeModal === "faq"} onClose={closeModal} title="Frequently Asked Questions">
+        <FAQContent />
+      </PolicyModal>
+
+      <PolicyModal isOpen={activeModal === "privacy"} onClose={closeModal} title="Privacy Policy">
+        <PrivacyPolicyContent />
+      </PolicyModal>
     </footer>
   )
 }

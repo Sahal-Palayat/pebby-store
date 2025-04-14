@@ -48,13 +48,12 @@ const mobileMenuVariants = {
 // Menu data
 const menuData = [
   { title: "Home", path: "/" },
-  { title: "Shop", path: "/shop" },
+  // { title: "Shop", path: "/shop" },
   { title: "About", path: "/about" },
   { title: "Contact", path: "/contact" },
 ];
 
 const Header = () => {
-  const [searchQuery, setSearchQuery] = useState("");
   const [navigationOpen, setNavigationOpen] = useState(false);
 
   return (
@@ -78,8 +77,7 @@ const Header = () => {
                   />
                 </h2>
                 <p className="text-xs text-gray-500 hidden sm:block">
-                  A selection of curated goods, hand-picked by our team for you.
-                </p>
+                Fun & personalized items for kids.                                </p>
               </Link>
             </motion.div>
 
@@ -112,7 +110,7 @@ const Header = () => {
             </nav>
 
             {/* Search Bar */}
-            <div className="hidden md:block max-w-[350px] w-full mx-4">
+            {/* <div className="hidden md:block max-w-[350px] w-full mx-4">
               <div className="relative">
                 <input
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -132,7 +130,7 @@ const Header = () => {
                   </svg>
                 </button>
               </div>
-            </div>
+            </div> */}
 
             {/* Support + Mobile Toggle */}
             <div className="flex items-center gap-4">

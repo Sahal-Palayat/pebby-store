@@ -13,12 +13,12 @@ const defaultProducts = [
       "Personalized name slips perfect for kids to label school supplies, books, and gifts.",
   },
   {
-    title: "Face Sticker",
+    title: "Mug",
     color: "bg-yellow-500",
     hoverColor: "hover:bg-yellow-600",
     image:
-      "./products/tiffin.png",
-    description: "Cute and custom face stickers that add personality to notebooks, bottles, and more.",
+      "./products/mug-1.jpg",
+    description: "Personalized ceramic mug for kids – a perfect gift for birthdays or daily use.",
   },
   {
     title: "Name Tags",
@@ -33,18 +33,18 @@ const defaultProducts = [
     color: "bg-purple-500",
     hoverColor: "hover:bg-purple-600",
     image:
-      "./products/bottle-1.png",
+      "./products/bottle-2.jpg",
     description:
       "Stylish and sturdy water bottle with customizable name, perfect for school use.",
   },
   {
-    title: "Lunch Box",
+    title: "Money Bank",
     color: "bg-pink-500",
     hoverColor: "hover:bg-pink-600",
     image:
-      "./products/tiffin.png",
+      "/products/money-bank-1.jpg",
     description:
-      "Compact and fun lunch box for kids, includes a personal name label on the lid.",
+      "Adorable money bank to encourage saving habits in kids – a fun and functional gift.",
   },
   {
     title: "Calculator",

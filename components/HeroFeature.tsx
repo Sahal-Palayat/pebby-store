@@ -13,8 +13,8 @@ const featureData = [
   },
   {
     icon: RefreshCw,
-    title: "1 & 1 Returns",
-    description: "Cancellation after 1 day",
+    title: "Premium Quality Guarantee",
+    description: "Every item crafted with care and durable materials",
     border: "border-blue-300",
     iconBg: "bg-blue-200",
   },
