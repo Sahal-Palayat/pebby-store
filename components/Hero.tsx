@@ -13,7 +13,7 @@ const cardData = [
     price: "₹579",
     oldPrice: "₹329",
     offer: "Back to School Special",
-    image: "/products/name-slip-8.png",
+    image: "/Products/name-slip-8.png",
     glow: "#06D6A0",
     textColor: "#073B4C",
   },
@@ -26,7 +26,7 @@ const cardData = [
     price: "₹1159",
     oldPrice: "₹769",
     offer: "Back to School Special",
-    image: "/products/bottle-1.png",
+    image: "./Products/bottle-1.png",
     glow: "#06D6A0",
     textColor: "#06D6A0",
   },
@@ -39,7 +39,7 @@ const cardData = [
     price: "₹599",
     oldPrice: "₹369",
     offer: "Limited Time Offer",
-    image: "/products/bag-tag-2.png",
+    image: "./Products/Bag-tag-4.png",
     glow: "#EF476F",
     textColor: "#073B4C",
   },
@@ -51,7 +51,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 xl:px-0">
         <div className="mb-10 relative rounded-xl bg-white overflow-hidden">
           <Image
-            src="/images/banner/hero1.png"
+            src="/banner/hero1.png"
             alt="hero"
             width={534}
             height={520}
@@ -132,7 +132,7 @@ export default function HeroSection() {
                         style={{ backgroundColor: `${item.glow}33` }}
                       ></div>
                       <div className="transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
-                        <Image
+                        <img
                           src={item.image}
                           alt={item.title}
                           width={203}

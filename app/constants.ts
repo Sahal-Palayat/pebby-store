@@ -14,9 +14,9 @@ export const products = [
         "Easy to stick",
         "Ideal for labeling"
       ],
-      image: "/products/name-slip-1.jpg",
+      image: "/Products/name-slip-1.jpg",
       images: [
-        "/products/name-slip-1.jpg",
+        "/Products/name-slip-1.jpg",
        
       ]
     },
@@ -35,10 +35,10 @@ export const products = [
         "Durable material",
         "Kid-friendly design"
       ],
-      image: "/products/bag-tag-3.jpg",
+      image: "/Products/bag-tag-3.jpg",
       images: [
-        "/products/bag-tag-3.jpg",
-        "/products/bag-tag-1.jpg",
+        "/Products/bag-tag-3.jpg",
+        "/Products/bag-tag-1.jpg",
         
       ]
     },
@@ -57,10 +57,10 @@ export const products = [
         "Leak-proof design",
         "Easy to carry"
       ],
-      image: "/products/bottle-2.jpg",
+      image: "/Products/bottle-2.jpg",
       images: [
-        "/products/bottle-2.jpg",
-        "/products/bottle-1.png",
+        "/Products/bottle-2.jpg",
+        "/Products/bottle-1.png",
     
       ]
     },
@@ -79,9 +79,9 @@ export const products = [
         "Sturdy ceramic build",
         "Kid-friendly designs"
       ],
-      image: "/products/mug-1.jpg",
+      image: "/Products/mug-1.jpg",
       images: [
-        "/products/mug-1.jpg",
+        "/Products/mug-1.jpg",
     
       ]
     },
@@ -100,12 +100,12 @@ export const products = [
         "Great for learning math",
         "Battery included"
       ],
-      image: "/products/calculator-1.jpg",
+      image: "/Products/calculator-1.jpg",
       images: [
-        "/products/calculator-1.jpg",
-        "/products/calculator-2.jpg",
-        "/products/calculator-3.jpg",
-        "/products/calculator-4.jpg"
+        "/Products/calculator-1.jpg",
+        "/Products/calculator-2.jpg",
+        "/Products/calculator-3.jpg",
+        "/Products/calculator-4.jpg"
       ]
     },
     {
@@ -123,12 +123,12 @@ export const products = [
         "Secure slot & lock",
         "Perfect for kids' rooms"
       ],
-      image: "/products/money-bank-1.jpg",
+      image: "/Products/money-bank-1.jpg",
       images: [
-        "/products/money-bank-1.jpg",
-        "/products/money-bank-2.jpg",
-        "/products/money-bank-3.jpg",
-        "/products/money-bank-4.jpg"
+        "/Products/money-bank-1.jpg",
+        "/Products/money-bank-2.jpg",
+        "/Products/money-bank-3.jpg",
+        "/Products/money-bank-4.jpg"
       ]
     }
   ];

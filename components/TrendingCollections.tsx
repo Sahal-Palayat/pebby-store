@@ -8,7 +8,7 @@ const defaultProducts = [
     color: "bg-blue-500",
     hoverColor: "hover:bg-blue-600",
     image:
-      "./products/name-slip-1.jpg",
+      "/Products/name-slip-1.jpg",
     description:
       "Personalized name slips perfect for kids to label school supplies, books, and gifts.",
   },
@@ -17,7 +17,7 @@ const defaultProducts = [
     color: "bg-yellow-500",
     hoverColor: "hover:bg-yellow-600",
     image:
-      "./products/mug-1.jpg",
+      "/Products/mug-1.jpg",
     description: "Personalized ceramic mug for kids – a perfect gift for birthdays or daily use.",
   },
   {
@@ -25,7 +25,7 @@ const defaultProducts = [
     color: "bg-green-500",
     hoverColor: "hover:bg-green-600",
     image:
-      "./products/bag-tag-1.jpg",
+      "/Products/bag-tag-1.jpg",
     description: "Custom name tags to personalize bags, lunch boxes, and school essentials.",
   },
   {
@@ -33,7 +33,7 @@ const defaultProducts = [
     color: "bg-purple-500",
     hoverColor: "hover:bg-purple-600",
     image:
-      "./products/bottle-2.jpg",
+      "/Products/bottle-2.jpg",
     description:
       "Stylish and sturdy water bottle with customizable name, perfect for school use.",
   },
@@ -51,7 +51,7 @@ const defaultProducts = [
     color: "bg-teal-500",
     hoverColor: "hover:bg-teal-600",
     image:
-      "./products/calculator-1.jpg",
+      "/Products/calculator-1.jpg",
     description:
       "Lightweight and colorful calculator ideal for kids and students in school.",
   },
