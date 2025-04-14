@@ -98,8 +98,8 @@ export default function ProductDetails() {
     const message = `
   *Order Request*
   ------------------
-  *Product:* ₹${product.title}
-  *Category:* ₹${product.category}
+  *Product:* ${product.title}
+  *Category:* ${product.category}
   *Price:* ₹${price} each
   *Quantity:* ${quantity}
   *Total:* ₹${totalPrice}
