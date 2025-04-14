@@ -56,10 +56,10 @@ export default function KidsFooter() {
             <div className="flex items-center mb-4">
               <img src="/PebbyLogo.png" alt="" width={150} />
             </div>
-            <p className="text-sm mb-2 text-center md:text-left">1234 North Rainbow Street</p>
-            <p className="text-sm mb-2 text-center md:text-left">Toyville, Funland</p>
-            <p className="text-sm mb-4 text-center md:text-left">+1 (123) 456-7890</p>
-            <p className="text-sm text-center md:text-left">info@kidoo.play</p>
+            <p className="text-sm mb-2 text-center md:text-left">Kaloor</p>
+            <p className="text-sm mb-2 text-center md:text-left">Ernakulam,kerala</p>
+            <p className="text-sm mb-4 text-center md:text-left">+91 8136851299</p>
+            <p className="text-sm text-center md:text-left">www.pebby.in</p>
 
             <div className="mt-6">
               <Link
@@ -150,17 +150,17 @@ export default function KidsFooter() {
           <div className="col-span-1 flex flex-col items-center md:items-start">
             <h3 className="text-lg font-bold mb-4">Need Help</h3>
             <div className="mb-4 text-center md:text-left">
-              <p className="font-bold">+123 - 456 - 7890</p>
-              <p className="font-bold">+123 - 456 - 7890</p>
+              <p className="font-bold">+91 8136851299</p>
+              <p className="font-bold">+91 8136851299</p>
             </div>
 
-            <div className="mb-6 text-center md:text-left">
+            {/* <div className="mb-6 text-center md:text-left">
               <p className="text-sm">Monday - Friday</p>
               <p className="text-sm">9:00 - 18:00</p>
               <p className="text-sm">Saturday</p>
               <p className="text-sm">9:00 - 14:00</p>
               <p className="text-sm">Sunday - Closed</p>
-            </div>
+            </div> */}
 
             {/* Character illustration - hidden on mobile, visible on desktop */}
             <div className="hidden md:block relative w-full">
@@ -198,7 +198,7 @@ export default function KidsFooter() {
                   <Twitter size={16} />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.instagram.com/pebby.in?igsh=MW1hMjF3cml1ajltZA%3D%3D&utm_source=qr"
                   className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-purple-600 hover:bg-yellow-300 transition-colors"
                   aria-label="Instagram"
                 >
@@ -215,18 +215,18 @@ export default function KidsFooter() {
             </div>
 
             {/* Payment Methods */}
-            <div className="flex space-x-2 justify-center">
+            {/* <div className="flex space-x-2 justify-center">
               {["visa", "mastercard", "paypal", "apple-pay"].map((method) => (
                 <div key={method} className="w-10 h-6 bg-white rounded flex items-center justify-center">
                   <span className="text-xs text-gray-500">{method.charAt(0).toUpperCase()}</span>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Copyright */}
           <div className="mt-6 text-center text-xs">
-            <p>© 2023 Kidoo. All Rights Reserved.</p>
+            <p>© 2025 pebby. All Rights Reserved.</p>
           </div>
         </div>
       </div>

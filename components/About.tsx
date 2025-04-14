@@ -13,10 +13,9 @@ interface PassionateTeamProps {
 }
 
 const PassionateTeam = ({
-  title = "Passionate team",
+  title = "Our Story",
   description = [
-    "We're all about making childhood fun, creative, and full of joy! Our team is dedicated to bringing smiles with exciting, personalized products that add a special touch to everyday moments.",
-    "From custom name labels to fun learning boards, we create items that spark imagination and make life easier for parents. Every product is designed to bring happiness, organization, and a little extra magic to a child's world!",
+    "This venture started from a simple dream—a passion for business and a desire to offer only the best quality products to families like ours.From the very beginning, we’ve been committed to curating products that we personally love and trust. We believe every child deserves the best, and every parent deserves a hassle-free, joyful shopping experience.We startedonline to make your shopping journey easy, accessible, and convenient from anywhere. But we’re not stopping there—our first physical store is coming soon to Kochi, Panampilly Nagar! 🛍Thank you for being part of our journey. We’re just getting started, and we’re so excited to grow with you ",
   ],
   buttonText = "Meet Our Team",
   buttonLink = "#",
@@ -52,7 +51,7 @@ const PassionateTeam = ({
               {paragraph}
             </p>
           ))}
-          <div className="pt-4">
+          {/* <div className="pt-4">
             <motion.a
               href={buttonLink}
               className="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white font-medium py-3 px-8 rounded-full hover:shadow-lg transition-all duration-300"
@@ -60,7 +59,7 @@ const PassionateTeam = ({
             >
               {buttonText}
             </motion.a>
-          </div>
+          </div> */}
         </div>
       </div>
 

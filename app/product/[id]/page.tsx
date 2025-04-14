@@ -2,184 +2,19 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import Link from "next/link";
 import { MessageCircle, Star, Truck, Shield, RotateCcw } from "lucide-react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
-
+import { products } from "@/app/constants";
 
 export default function ProductDetails() {
   const params = useParams();
   const [product, setProduct] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState(1);
-  const [activeTab, setActiveTab] = useState("description");
   const [isLoading, setIsLoading] = useState(true);
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
 
   // Product data - in a real app this would come from an API
-  const products = [
-    {
-      id: 1,
-      category: "Toys",
-      title: "Creative Building Blocks Set",
-      description:
-        "Colorful blocks to enhance creativity and imagination. Perfect for children ages 3-8. These building blocks are designed to stimulate young minds and encourage creative play. Each block is made from high-quality, child-safe materials that are durable and built to last through years of play.",
-      image:
-        "https://i.pinimg.com/736x/a2/a2/68/a2a26854c0b56033676f4d6d5115ca85.jpg",
-      rating: 5,
-      price: 24.99,
-      offerPrice: 19.99,
-      offerPercentage: 20,
-      features: [
-        "50+ colorful pieces",
-        "Storage box included",
-        "Develops motor skills",
-        "Ages 3+",
-        "Non-toxic materials",
-        "Educational play",
-      ],
-    },
-    {
-      id: 2,
-      category: "Books",
-      title: "Interactive Storybook Collection",
-      description:
-        "Engaging stories for young readers with interactive elements on every page. These beautifully illustrated books bring stories to life with touch-responsive elements that make reading an immersive experience for children.",
-      image:
-        "https://i.pinimg.com/736x/a2/a2/68/a2a26854c0b56033676f4d6d5115ca85.jpg",
-      rating: 4,
-      price: 19.99,
-      offerPrice: 14.99,
-      offerPercentage: 25,
-      features: [
-        "5 stories included",
-        "Touch-responsive pages",
-        "Audio narration",
-        "Ages 4+",
-        "Develops reading skills",
-      ],
-    },
-    {
-      id: 3,
-      category: "Games",
-      title: "Memory Match Card Game",
-      description:
-        "Fun educational game for kids that improves memory and concentration skills. This classic memory matching game has been redesigned with vibrant, child-friendly illustrations that capture attention and make learning fun.",
-      image:
-        "https://i.pinimg.com/736x/a2/a2/68/a2a26854c0b56033676f4d6d5115ca85.jpg",
-      rating: 5,
-      price: 14.99,
-      offerPrice: 11.99,
-      offerPercentage: 20,
-      features: [
-        "36 cards",
-        "Durable material",
-        "Travel-friendly",
-        "Ages 5+",
-        "Improves concentration",
-      ],
-    },
-    {
-      id: 4,
-      category: "Crafts",
-      title: "DIY Craft Kit for Kids",
-      description:
-        "Creative art supplies for little artists to make their own masterpieces. This comprehensive craft kit includes everything your child needs to explore their artistic side and create beautiful projects they'll be proud to display.",
-      image:
-        "https://i.pinimg.com/736x/a2/a2/68/a2a26854c0b56033676f4d6d5115ca85.jpg",
-      rating: 4,
-      price: 22.99,
-      offerPrice: 18.99,
-      offerPercentage: 17,
-      features: [
-        "Non-toxic materials",
-        "Instruction booklet",
-        "10+ projects",
-        "Ages 6+",
-        "Develops fine motor skills",
-      ],
-    },
-    {
-      id: 5,
-      category: "Puzzles",
-      title: "Animal Kingdom Puzzle Set",
-      description:
-        "Educational puzzles for development featuring adorable animals from around the world. These wooden puzzles are designed to challenge young minds while teaching them about different animals and their habitats.",
-      image:
-        "https://i.pinimg.com/736x/a2/a2/68/a2a26854c0b56033676f4d6d5115ca85.jpg",
-      rating: 5,
-      price: 18.99,
-      offerPrice: 15.99,
-      offerPercentage: 15,
-      features: [
-        "3 difficulty levels",
-        "Wooden pieces",
-        "Educational guide",
-        "Ages 4+",
-        "Develops problem-solving skills",
-      ],
-    },
-    {
-      id: 6,
-      category: "Learning",
-      title: "ABC Learning Blocks",
-      description:
-        "Alphabet learning made fun with interactive blocks that speak letters and words. These electronic blocks respond when arranged in different combinations, teaching letter recognition, phonics, and simple spelling.",
-      image:
-        "https://i.pinimg.com/736x/a2/a2/68/a2a26854c0b56033676f4d6d5115ca85.jpg",
-      rating: 5,
-      price: 29.99,
-      offerPrice: 23.99,
-      offerPercentage: 20,
-      features: [
-        "26 alphabet blocks",
-        "Light-up buttons",
-        "Multiple learning modes",
-        "Ages 2+",
-        "Batteries included",
-      ],
-    },
-    {
-      id: 7,
-      category: "Toys",
-      title: "Plush Animal Collection",
-      description:
-        "Super soft plush animals that are perfect for cuddling and imaginative play. Each animal is crafted with premium materials for maximum softness and durability, making them perfect companions for children of all ages.",
-      image:
-        "https://i.pinimg.com/736x/a2/a2/68/a2a26854c0b56033676f4d6d5115ca85.jpg",
-      rating: 5,
-      price: 34.99,
-      offerPrice: 27.99,
-      offerPercentage: 20,
-      features: [
-        "Set of 3 animals",
-        "Machine washable",
-        "Hypoallergenic",
-        "Ages 0+",
-        "Ultra-soft fabric",
-      ],
-    },
-    {
-      id: 8,
-      category: "Games",
-      title: "Junior Strategy Board Game",
-      description:
-        "Introduction to strategy games designed specifically for young minds. This board game teaches basic strategy concepts in a fun, engaging way that's accessible to children while still being enjoyable for adults to play along.",
-      image:
-        "https://i.pinimg.com/736x/a2/a2/68/a2a26854c0b56033676f4d6d5115ca85.jpg",
-      rating: 4,
-      price: 24.99,
-      offerPrice: 19.99,
-      offerPercentage: 20,
-      features: [
-        "2-4 players",
-        "30 minute gameplay",
-        "Develops critical thinking",
-        "Ages 6+",
-        "Family-friendly",
-      ],
-    },
-  ];
 
   type Product = {
     id: number;
@@ -192,9 +27,9 @@ export default function ProductDetails() {
     offerPrice?: number;
     offerPercentage?: number;
     features: string[];
+    images: string[];
   };
-  
- 
+
   // Get category background color based on category name
   const getCategoryColor = (category: string) => {
     const colorMap: Record<string, string> = {
@@ -204,10 +39,17 @@ export default function ProductDetails() {
       Crafts: "bg-pink-400",
       Puzzles: "bg-yellow-400",
       Learning: "bg-red-400",
+      Stationery: "bg-red-700",
     };
 
     return colorMap[category] || "bg-gray-400";
   };
+  const [selectedImage, setSelectedImage] = useState("");
+  useEffect(() => {
+    if (product) {
+      setSelectedImage(product.image); // default main image
+    }
+  }, [product]);
 
   // Simulate fetching product data
   useEffect(() => {
@@ -249,12 +91,12 @@ export default function ProductDetails() {
 
   const openWhatsApp = () => {
     if (!product) return;
-  
+
     const price: number = parseFloat(
       (product.offerPrice || product.price).toFixed(2)
     );
     const totalPrice: string = (price * quantity).toFixed(2);
-  
+
     const message = `
   *Order Request*
   ------------------
@@ -268,13 +110,12 @@ export default function ProductDetails() {
   ------------------
   I would like to placee an order for this product. Please provide payment and delivery details.
     `;
-  
+
     const whatsappUrl = `https://wa.me/+919633167249?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
   };
-  
 
   // Handle quantity changes
   const decreaseQuantity = () => {
@@ -336,7 +177,7 @@ export default function ProductDetails() {
           <div className="relative">
             <div className="bg-gray-50 rounded-xl overflow-hidden mb-4">
               <img
-                src={product.image || "/placeholder.svg"}
+                src={selectedImage || "/placeholder.svg"}
                 alt={product.title}
                 className="w-full h-auto object-contain aspect-square"
               />
@@ -356,13 +197,18 @@ export default function ProductDetails() {
 
             {/* Thumbnail images - would be actual product images in a real app */}
             <div className="grid grid-cols-4 gap-2">
-              {[...Array(4)].map((_, i) => (
+              {product.images?.map((imgUrl, i) => (
                 <div
                   key={i}
-                  className="border-2 border-gray-200 hover:border-blue-500 rounded-lg overflow-hidden cursor-pointer"
+                  onClick={() => setSelectedImage(imgUrl)}
+                  className={`border-2 rounded-lg overflow-hidden cursor-pointer ${
+                    selectedImage === imgUrl
+                      ? "border-blue-500"
+                      : "border-gray-200"
+                  }`}
                 >
                   <img
-                    src={product.image || "/placeholder.svg"}
+                    src={imgUrl}
                     alt={`${product.title} view ${i + 1}`}
                     className="w-full h-auto aspect-square object-cover"
                   />
@@ -376,22 +222,7 @@ export default function ProductDetails() {
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
               {product.title}
             </h1>
-
             <div className="flex items-center gap-4 mb-4">
-              <div className="flex items-center">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`w-5 h-5 ${
-                      i < product.rating
-                        ? "fill-yellow-400 text-yellow-400"
-                        : "fill-gray-200 text-gray-200"
-                    }`}
-                  />
-                ))}
-                <span className="ml-2 text-sm text-gray-500">(24 Reviews)</span>
-              </div>
-
               <span className="text-sm text-green-600 font-medium">
                 In Stock
               </span>
@@ -404,11 +235,11 @@ export default function ProductDetails() {
             {/* Price */}
             <div className="flex items-baseline gap-3 mb-6">
               <span className="text-3xl font-bold text-green-600">
-                ${product.offerPrice}
+                ₹ {product.offerPrice}
               </span>
               {product.offerPrice && (
                 <span className="text-lg text-gray-500 line-through">
-                  ${product.price}
+                  ₹{product.price}
                 </span>
               )}
               {product.offerPercentage && (
@@ -488,158 +319,8 @@ export default function ProductDetails() {
           </div>
         </div>
 
-        {/* Product tabs */}
-        <div className="mb-12">
-          <div className="border-b border-gray-200 mb-6">
-            <div className="flex space-x-8">
-              <button
-                className={`py-4 text-sm font-medium border-b-2 ${
-                  activeTab === "description"
-                    ? "border-blue-500 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                }`}
-                onClick={() => setActiveTab("description")}
-              >
-                Description
-              </button>
-              <button
-                className={`py-4 text-sm font-medium border-b-2 ${
-                  activeTab === "features"
-                    ? "border-blue-500 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                }`}
-                onClick={() => setActiveTab("features")}
-              >
-                Features
-              </button>
-              <button
-                className={`py-4 text-sm font-medium border-b-2 ${
-                  activeTab === "reviews"
-                    ? "border-blue-500 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                }`}
-                onClick={() => setActiveTab("reviews")}
-              >
-                Reviews
-              </button>
-            </div>
-          </div>
-
-          <div>
-            {activeTab === "description" && (
-              <div className="prose max-w-none">
-                <p>{product.description}</p>
-                <p>
-                  Our {product.title} is designed with childrens development in
-                  {
-                    "mind. Each product undergoes rigorous safety testing to ensure"
-                  }
-                  it meets the highest standards for quality and durability.
-                </p>
-                <p>
-                  {"Perfect for birthdays, holidays, or just because, this"}
-                  {product.category.toLowerCase()} item will bring joy and
-                  {"educational value to any child's collection."}
-                </p>
-              </div>
-            )}
-
-            {activeTab === "features" && (
-              <div>
-                <h3 className="font-bold text-lg mb-4">Product Features</h3>
-                <ul className="grid md:grid-cols-2 gap-3">
-                  {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <span
-                        className={`inline-block w-2 h-2 ${getCategoryColor(
-                          product.category
-                        )} rounded-full mt-1.5 mr-2`}
-                      ></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {activeTab === "reviews" && (
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="font-bold text-lg">Customer Reviews</h3>
-                  <button className="text-blue-500 hover:text-blue-700 text-sm font-medium">
-                    Write a Review
-                  </button>
-                </div>
-
-                <div className="space-y-6">
-                  {/* Sample reviews */}
-                  <div className="border-b pb-6">
-                    <div className="flex items-center mb-2">
-                      <div className="flex items-center">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-4 h-4 ${
-                              i < 5
-                                ? "fill-yellow-400 text-yellow-400"
-                                : "fill-gray-200 text-gray-200"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                      <span className="ml-2 text-sm font-medium">Sarah J</span>
-                      <span className="ml-auto text-sm text-gray-500">
-                        2 weeks ago
-                      </span>
-                    </div>
-                    <h4 className="font-medium mb-1">
-                      Perfect for my 5 year old
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      {
-                        " My child absolutely loves this product. It's been great for their development and they play with it every day. The quality is excellent and it has held up well to daily use."
-                      }
-                    </p>
-                  </div>
-
-                  <div className="border-b pb-6">
-                    <div className="flex items-center mb-2">
-                      <div className="flex items-center">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-4 h-4 ${
-                              i < 4
-                                ? "fill-yellow-400 text-yellow-400"
-                                : "fill-gray-200 text-gray-200"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                      <span className="ml-2 text-sm font-medium">
-                        Michael T
-                      </span>
-                      <span className="ml-auto text-sm text-gray-500">
-                        1 month ago
-                      </span>
-                    </div>
-                    <h4 className="font-medium mb-1">
-                      Great educational value
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      This product has been wonderful for my childs learning. Im
-                      impressed with how much they ve developed while having fun
-                      with it. Would definitely recommend to other parents.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-
         {/* Related products */}
-        <div>
+        {/* <div>
           <h2 className="text-2xl font-bold mb-6">You May Also Like</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {relatedProducts.map((relatedProduct) => (
@@ -707,7 +388,7 @@ export default function ProductDetails() {
               </motion.div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

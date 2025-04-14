@@ -8,52 +8,52 @@ const defaultProducts = [
     color: "bg-blue-500",
     hoverColor: "hover:bg-blue-600",
     image:
-      "https://i.pinimg.com/736x/44/3c/df/443cdf0acbd9cdf8f05e679df2f624d5.jpg",
+      "./products/name-slip-1.jpg",
     description:
-      "Waterproof and easy-to-stick name labels for books, bags, and stationery",
+      "Personalized name slips perfect for kids to label school supplies, books, and gifts.",
   },
   {
-    title: "Water Bottles",
+    title: "Face Sticker",
     color: "bg-yellow-500",
     hoverColor: "hover:bg-yellow-600",
     image:
-      "https://i.pinimg.com/736x/44/3c/df/443cdf0acbd9cdf8f05e679df2f624d5.jpg",
-    description: "BPA-free bottles with custom names and designs",
+      "./products/tiffin.png",
+    description: "Cute and custom face stickers that add personality to notebooks, bottles, and more.",
   },
   {
     title: "Name Tags",
     color: "bg-green-500",
     hoverColor: "hover:bg-green-600",
     image:
-      "https://i.pinimg.com/736x/44/3c/df/443cdf0acbd9cdf8f05e679df2f624d5.jpg",
-    description: "Name badges with school/madrasa logo and student details.",
+      "./products/bag-tag-1.jpg",
+    description: "Custom name tags to personalize bags, lunch boxes, and school essentials.",
   },
   {
-    title: "Starboard",
+    title: "Bottle",
     color: "bg-purple-500",
     hoverColor: "hover:bg-purple-600",
     image:
-      "https://i.pinimg.com/736x/44/3c/df/443cdf0acbd9cdf8f05e679df2f624d5.jpg",
+      "./products/bottle-1.png",
     description:
-      "A magnetic board with a calendar, reminders, and timetable space.",
+      "Stylish and sturdy water bottle with customizable name, perfect for school use.",
   },
   {
-    title: "Exam Boards",
+    title: "Lunch Box",
     color: "bg-pink-500",
     hoverColor: "hover:bg-pink-600",
     image:
-      "https://i.pinimg.com/736x/44/3c/df/443cdf0acbd9cdf8f05e679df2f624d5.jpg",
+      "./products/tiffin.png",
     description:
-      "Lightweight and durable boards for writing exams comfortably.",
+      "Compact and fun lunch box for kids, includes a personal name label on the lid.",
   },
   {
-    title: "Learning Kits",
+    title: "Calculator",
     color: "bg-teal-500",
     hoverColor: "hover:bg-teal-600",
     image:
-      "https://i.pinimg.com/736x/44/3c/df/443cdf0acbd9cdf8f05e679df2f624d5.jpg",
+      "./products/calculator-1.jpg",
     description:
-      "Complete learning kits with educational materials and activities.",
+      "Lightweight and colorful calculator ideal for kids and students in school.",
   },
 ];
 

@@ -5,11 +5,11 @@ import HeroFeature from "./HeroFeature";
 const cardData = [
   {
     title: "Customized Name Slips",
-    label: "New!",
+    label: "Trending!",
     labelColor: "#06D6A0",
     bgFrom: "#E0F7FA",
-    price: "$15.99",
-    oldPrice: "$24.99",
+    price: "₹330",
+    oldPrice: "₹330",
     offer: "Back to School Special",
     image: "/images/banner/hero2.png",
     glow: "#06D6A0",
@@ -20,10 +20,10 @@ const cardData = [
     label: "New!",
     labelColor: "#06D6A0",
     bgFrom: "#E0F7FA",
-    price: "$15.99",
-    oldPrice: "$24.99",
+    price: "₹599",
+    oldPrice: "₹599",
     offer: "Back to School Special",
-    image: "/images/banner/hero3.png",
+    image: "/products/bottle-1.png",
     glow: "#06D6A0",
     textColor: "#06D6A0",
   },
@@ -32,8 +32,8 @@ const cardData = [
     label: "Popular",
     labelColor: "#EF476F",
     bgFrom: "#FFE5F1",
-    price: "$12.99",
-    oldPrice: "$19.99",
+    price: "₹299",
+    oldPrice: "₹299",
     offer: "Limited Time Offer",
     image: "/images/banner/hero3.png",
     glow: "#EF476F",
@@ -139,7 +139,7 @@ export default function HeroSection() {
                 style={{ backgroundImage: `linear-gradient(to top, ${item.labelColor}, transparent)` }}
               >
                 <a href="#" className="text-white font-medium text-sm hover:underline">
-                  Add to Cart
+                  
                 </a>
               </div>
             </div>

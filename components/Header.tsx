@@ -57,16 +57,11 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [navigationOpen, setNavigationOpen] = useState(false);
 
- 
   return (
     <>
-      <header
-        className='fixed left-0 top-0 w-full z-[999] bg-[#f9f3e6] transition-all ease-in-out duration-300 '
-      >
+      <header className="fixed left-0 top-0 w-full z-[999] bg-[#f9f3e6] transition-all ease-in-out duration-300 ">
         <div className="max-w-[1170px] mx-auto px-4 sm:px-6 xl:px-0">
-          <div
-            className='flex items-center justify-between transition-all duration-300 py-3'>
-
+          <div className="flex items-center justify-between transition-all duration-300 py-3">
             <motion.div
               variants={logoVariants}
               initial="hidden"
@@ -165,7 +160,7 @@ const Header = () => {
                     SUPPORT
                   </span>
                   <p className="font-medium text-sm text-pink-500">
-                    +91 7510115894
+                    +91 8136851299
                   </p>
                 </div>
               </motion.div>
@@ -204,7 +199,7 @@ const Header = () => {
                       SUPPORT
                     </span>
                     <p className="text-[11px] sm:text-sm font-medium text-pink-500">
-                      +91 7510115894
+                      +91 8136851299
                     </p>
                   </div>
                 </div>
@@ -262,16 +257,16 @@ const Header = () => {
         <div className="bg-purple-600 overflow-hidden py-1 relative">
           <div className="animate-marquee whitespace-nowrap flex items-center justify-center text-white">
             <span className="mx-4 flex items-center text-sm md:text-base">
-              Use Code WELCOME10 & Get 10% Off on Orders Above ₹399!
+            Exciting New Collection Arriving Soon!✨
               <PartyPopper className="h-4 w-4 ml-2" />
             </span>
             <span className="mx-4 flex items-center text-sm md:text-base">
-              Use Code WELCOME10 & Get 10% Off on Orders Above ₹399!
+            Exciting New Collection Arriving Soon!✨
               <PartyPopper className="h-4 w-4 ml-2" />
             </span>
             <span className="mx-4 flex items-center text-sm md:text-base">
-              Use Code WELCOME10 & Get 10% Off on Orders Above ₹399!
-              <PartyPopper className="h-4 w-4 ml-2" />
+            Exciting New Collection Arriving Soon!✨
+                <PartyPopper className="h-4 w-4 ml-2" />
             </span>
           </div>
         </div>
