@@ -42,7 +42,7 @@ const defaultProducts = [
     color: "bg-pink-500",
     hoverColor: "hover:bg-pink-600",
     image:
-      "/products/money-bank-1.jpg",
+      "/Products/money-bank-1.jpg",
     description:
       "Adorable money bank to encourage saving habits in kids – a fun and functional gift.",
   },
