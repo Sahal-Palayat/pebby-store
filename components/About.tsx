@@ -17,8 +17,6 @@ const PassionateTeam = ({
   description = [
     "This venture started from a simple dream—a passion for business and a desire to offer only the best quality products to families like ours.From the very beginning, we’ve been committed to curating products that we personally love and trust. We believe every child deserves the best, and every parent deserves a hassle-free, joyful shopping experience.We startedonline to make your shopping journey easy, accessible, and convenient from anywhere. But we’re not stopping there—our first physical store is coming soon to Kochi, Panampilly Nagar! 🛍Thank you for being part of our journey. We’re just getting started, and we’re so excited to grow with you ",
   ],
-  buttonText = "Meet Our Team",
-  buttonLink = "#",
   imageSrc = "https://i.pinimg.com/736x/75/7f/c9/757fc9be08a8ffd0c7ce642d220227ed.jpg",
   imageAlt = "Passionate team of educators",
   className = "",

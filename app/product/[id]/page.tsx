@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { MessageCircle, Star, Truck, Shield, RotateCcw } from "lucide-react";
+import { MessageCircle, Truck, Shield, RotateCcw } from "lucide-react";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import { products } from "@/app/constants";
@@ -12,7 +12,6 @@ export default function ProductDetails() {
   const [product, setProduct] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
-  const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
 
   // Product data - in a real app this would come from an API
 
@@ -84,7 +83,6 @@ export default function ProductDetails() {
     // Simulate loading delay
     setTimeout(() => {
       setProduct(foundProduct);
-      setRelatedProducts(related);
       setIsLoading(false);
     }, 500);
   }, [params.id]);
