@@ -3,7 +3,7 @@ export const products = [
       id: 1,
       category: "Stationery",
       title: "Name Slip",
-      description: "Personalized name slips perfect for kids to label school supplies, books, and gifts.",
+      description: "Personalized name slips perfect for kids to label school supplies, books, and gifts — includes 24 custom name slips: 16 name labels  and 8 name stickers",
       rating: 5,
       price: 579,
       offerPrice: 329,
