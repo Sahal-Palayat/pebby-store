@@ -204,7 +204,7 @@ export default function KidsFooter() {
                   <Instagram size={16} />
                 </Link>
                 <Link
-                  href="#"
+                  href="https://www.youtube.com/channel/UCZw1ifhWH5fsmXz82mL6z3w"
                   className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-purple-600 hover:bg-yellow-300 transition-colors"
                   aria-label="Youtube"
                 >
