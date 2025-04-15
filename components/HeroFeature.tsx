@@ -7,7 +7,7 @@ const featureData = [
   {
     icon: Truck,
     title: "Free Shipping",
-    description: "For all orders $200",
+    description: "For all orders ₹200",
     border: "border-pink-300",
     iconBg: "bg-pink-200",
   },
