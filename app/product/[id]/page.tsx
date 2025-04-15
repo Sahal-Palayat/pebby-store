@@ -103,7 +103,7 @@ export default function ProductDetails() {
   *Quantity:* ${quantity}
   *Total:* ₹${totalPrice}
   ------------------
-  I would like to placee an order for this product. Please provide payment and delivery details.
+  I would like to place an order for this product. Please provide payment and delivery details.
     `;
 
     const whatsappUrl = `https://wa.me/+918136851299?text=${encodeURIComponent(
