@@ -23,7 +23,7 @@ export const products = [
     {
       id: 3,
       category: "Stationery",
-      title: "Name Tag",
+      title: "Bag Tag",
       description: "Custom name tags to personalize bags, lunch boxes, and school essentials.",
       rating: 5,
       price: 599,
@@ -67,7 +67,7 @@ export const products = [
     {
       id: 6,
       category: "Stationery",
-      title: "Mug",
+      title: "Custom Mug",
       description: "Personalized ceramic mug for kids – a perfect gift for birthdays or daily use.",
       rating: 5,
       price: 599,

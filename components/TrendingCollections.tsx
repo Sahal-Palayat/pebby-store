@@ -13,7 +13,7 @@ const defaultProducts = [
       "Personalized name slips perfect for kids to label school supplies, books, and gifts.",
   },
   {
-    title: "Mug",
+    title: "Custom Mug",
     color: "bg-yellow-500",
     hoverColor: "hover:bg-yellow-600",
     image:
@@ -21,7 +21,7 @@ const defaultProducts = [
     description: "Personalized ceramic mug for kids – a perfect gift for birthdays or daily use.",
   },
   {
-    title: "Name Tags",
+    title: "Bag Tag",
     color: "bg-green-500",
     hoverColor: "hover:bg-green-600",
     image:

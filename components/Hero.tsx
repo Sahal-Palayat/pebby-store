@@ -32,7 +32,7 @@ const cardData = [
   },
   {
     id: 3,
-    title: "Custom Name Tags",
+    title: "Bag Tags",
     label: "Popular",
     labelColor: "#EF476F",
     bgFrom: "#FFE5F1",
