@@ -99,11 +99,9 @@ export default function ProductDetails() {
   *Order Request*
   ------------------
   *Product:* ${product.title}
-  *Category:* ${product.category}
   *Price:* ₹${price} each
   *Quantity:* ${quantity}
   *Total:* ₹${totalPrice}
-  *Features:* ${product.features.join(", ")}
   ------------------
   I would like to placee an order for this product. Please provide payment and delivery details.
     `;
