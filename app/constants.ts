@@ -17,7 +17,10 @@ export const products = [
       image: "/Products/name-slip-1.jpg",
       images: [
         "/Products/name-slip-1.jpg",
-       
+        "/Products/name-slip-6.png",
+        "/Products/name-slip-5.png",
+        "/Products/name-slip-4.png",
+
       ]
     },
     {
