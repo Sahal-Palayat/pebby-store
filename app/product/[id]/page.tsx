@@ -174,7 +174,7 @@ export default function ProductDetails() {
               <img
                 src={selectedImage || "/placeholder.svg"}
                 alt={product.title}
-                className="w-full h-auto object-contain aspect-square"
+                className="w-full h-70 md:h-90 lg:h-90 object-fill"
               />
               {/* {product.offerPercentage && (
                 <div className="absolute top-4 left-4 bg-red-500 text-white font-bold px-3 py-1 rounded-full">
