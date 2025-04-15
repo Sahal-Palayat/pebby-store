@@ -176,11 +176,11 @@ export default function ProductDetails() {
                 alt={product.title}
                 className="w-full h-auto object-contain aspect-square"
               />
-              {product.offerPercentage && (
+              {/* {product.offerPercentage && (
                 <div className="absolute top-4 left-4 bg-red-500 text-white font-bold px-3 py-1 rounded-full">
                   {product.offerPercentage}% OFF
                 </div>
-              )}
+              )} */}
               <div
                 className={`absolute top-4 right-4 ${getCategoryColor(
                   product.category
@@ -237,11 +237,11 @@ export default function ProductDetails() {
                   ₹ {product.price * quantity}
                 </span>
               )}
-              {product.offerPercentage && (
+              {/* {product.offerPercentage && (
                 <span className="bg-red-100 text-red-600 px-2 py-1 rounded-full text-sm font-medium">
                   Save {product.offerPercentage}%
                 </span>
-              )}
+              )} */}
             </div>
 
             {/* Quantity selector */}
