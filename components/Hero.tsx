@@ -22,7 +22,7 @@ const cardData = [
     title: "Personalized Water Bottles",
     label: "New!",
     labelColor: "#06D6A0",
-    bgFrom: "#E0F7FA",
+    bgFrom: "##e0ffff",
     price: "₹769",
     oldPrice: "₹1159",
     offer: "Back to School Special",
